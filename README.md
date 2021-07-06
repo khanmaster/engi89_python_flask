@@ -135,3 +135,21 @@ if __name__ == "__main__":
 </body>
 </html>
 ```
+- API
+```python
+# # https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+from flask import Flask
+from flask_restful import Resource, Api
+
+app = Flask(__name__)
+api = Api(app)
+
+class HelloWorld(Resource):
+    def get(self):
+        return {'Stream': 'DevOps'}
+
+api.add_resource(HelloWorld, '/')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
